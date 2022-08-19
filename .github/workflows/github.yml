@@ -23,11 +23,14 @@ jobs:
 
 
       - name: Make Directory for results
-        run: mkdir -p testResults
+        run: |
+          mkdir -p testResults
+          cd testResults
+          touch htmlreport.html
 
 
       - name: Run POSTMAN collection
-        run: ls -a
+        run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./testResults/htmlreport.html
 
 
       - name: Output the run Details
