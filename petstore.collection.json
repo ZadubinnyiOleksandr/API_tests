@@ -789,23 +789,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"const responseJson = pm.response.json();\r",
-									"\r",
-									"pm.test(\"Response is not empty\", () => {\r",
-									"    pm.expect(responseJson).to.be.not.empty;\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response time is less than 200ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Pet ID is 1\", function () {\r",
-									"    pm.expect(responseJson.message).to.eql('1');\r",
-									"});"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -834,7 +818,7 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": "1",
+									"value": "3",
 									"description": "(Required) Pet id to delete"
 								}
 							]
