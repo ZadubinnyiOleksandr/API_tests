@@ -27,8 +27,7 @@ jobs:
 
 
       - name: Run POSTMAN collection
-        run: |
-          newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./testResults/htmlreport.html
+        run: ls -a
 
 
       - name: Output the run Details
