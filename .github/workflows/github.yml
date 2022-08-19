@@ -1,4 +1,4 @@
-name: Test-Build
+name: Test-Build and Deploy
 on:
   push:
     branches:
@@ -37,3 +37,9 @@ jobs:
         with:
           name: RunReports
           path: testResults
+          
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: testResults
