@@ -30,7 +30,7 @@ jobs:
 
 
       - name: Run POSTMAN collection
-        run: ls -a
+        run: pwd
 
 
       - name: Output the run Details
