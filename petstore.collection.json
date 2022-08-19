@@ -661,8 +661,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response time is less than 200ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 1000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Response is not empty\", () => {\r",
@@ -808,7 +808,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Pet ID is 9223372036854116804\", function () {\r",
-									"    pm.expect(responseJson.message).to.eql('9223372036854116804');\r",
+									"    pm.expect(responseJson.message).to.eql('2');\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -838,7 +838,7 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": "9223372036854116804",
+									"value": "2",
 									"description": "(Required) Pet id to delete"
 								}
 							]
