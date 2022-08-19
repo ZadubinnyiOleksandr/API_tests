@@ -22,20 +22,13 @@ jobs:
           npm install -g newman-reporter-htmlextra
 
 
-      - name: Make Directory for results
-        run: mkdir -p testResults
-          
-
-
       - name: Run POSTMAN collection
         run: |
-          pwd
-          ls -a
-          cat petstore.collection.json
-          
+          newman run petstore.collection.json -r htmlextra
+
 
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
           name: RunReports
-          path: testResults
+          path: newman
