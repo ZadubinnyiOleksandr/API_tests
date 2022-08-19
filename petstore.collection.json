@@ -803,8 +803,8 @@
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Pet ID is 3\", function () {\r",
-									"    pm.expect(responseJson.message).to.eql('3');\r",
+									"pm.test(\"Pet ID is 1\", function () {\r",
+									"    pm.expect(responseJson.message).to.eql('1');\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -834,7 +834,7 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": "3",
+									"value": "1",
 									"description": "(Required) Pet id to delete"
 								}
 							]
