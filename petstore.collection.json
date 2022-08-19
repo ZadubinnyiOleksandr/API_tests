@@ -81,8 +81,8 @@
 									"    pm.expect(pm.response.headers.get('Access-Control-Allow-Headers')).to.eql('Content-Type, api_key, Authorization');\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response time is less than 200ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 1000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
 									"});\r",
 									""
 								],
@@ -299,8 +299,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response time is less than 200ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 1000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Access-Control-Allow-Headers and Content-Type have all needed values\", () => {\r",
@@ -478,8 +478,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response time is less than 200ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 1000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Response is not empty\", () => {\r",
@@ -663,10 +663,6 @@
 									"\r",
 									"pm.test(\"Response time is less than 1000ms\", () => {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response is not empty\", () => {\r",
-									"    pm.expect(responseJson).to.be.not.empty;\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -685,7 +681,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pet/findByTags?tags=poppy",
+							"raw": "{{baseUrl}}/pet/findByTags?tags=string",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -696,7 +692,7 @@
 							"query": [
 								{
 									"key": "tags",
-									"value": "poppy",
+									"value": "string",
 									"description": "(Required) Tags to filter by"
 								}
 							]
@@ -807,8 +803,8 @@
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Pet ID is 9223372036854116804\", function () {\r",
-									"    pm.expect(responseJson.message).to.eql('2');\r",
+									"pm.test(\"Pet ID is 3\", function () {\r",
+									"    pm.expect(responseJson.message).to.eql('3');\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -838,7 +834,7 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": "2",
+									"value": "3",
 									"description": "(Required) Pet id to delete"
 								}
 							]
