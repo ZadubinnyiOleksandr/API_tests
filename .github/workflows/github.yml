@@ -30,7 +30,8 @@ jobs:
 
 
       - name: Run POSTMAN collection
-        run: pwd
+        run: |
+          newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export /home/runner/work/API_tests/API_tests/testResults/htmlreport.html
 
 
       - name: Output the run Details
