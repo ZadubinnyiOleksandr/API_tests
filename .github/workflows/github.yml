@@ -28,7 +28,7 @@ jobs:
 
       - name: Run POSTMAN collection
         run: |
-          par run petstore.collection.json --reporting ./testResults/htmlreport.html
+          par run petstore.collection.json --reporting testResults/htmlreport.html
 
 
       - name: Output the run Details
