@@ -23,19 +23,16 @@ jobs:
 
 
       - name: Make Directory for results
-        run: |
-          mkdir -p testResults
-          cd testResults
-          touch htmlreport.html
+        run: mkdir -p testResults
+          
 
 
       - name: Run POSTMAN collection
-        run: |
-          newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export /home/runner/work/API_tests/API_tests/testResults/htmlreport.html
+        run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export
 
 
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
           name: RunReports
-          path: testResults
+          path: newman
