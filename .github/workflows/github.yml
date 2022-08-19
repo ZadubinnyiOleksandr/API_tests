@@ -31,9 +31,8 @@ jobs:
         run: |
           pwd
           ls -a
-          cd home/runner/work/API_tests/API_tests
-          newman run ./petstore.collection.json -r htmlextra --reporter-htmlextra-export ./testResults/htmlreport.html
-
+          cat petstore.collection.json
+          
 
       - name: Output the run Details
         uses: actions/upload-artifact@v2
