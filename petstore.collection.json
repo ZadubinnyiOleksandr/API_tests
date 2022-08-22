@@ -909,12 +909,12 @@
 		},
 		{
 			"key": "status",
-			"value": "",
+			"value": "available",
 			"type": "string"
 		},
 		{
 			"key": "tag",
-			"value": "",
+			"value": "string",
 			"type": "string"
 		},
 		{
